@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pinterest: #E60023;
+  --color-pinterest-dark: #C8001A;
+  --color-pinterest-darker: #AD081B;
+  --color-pinterest-light: #FEE8EB;
+  --color-pinterest-soft: #FFF5F6;
+  --color-pinterest-border: #FCD5DA;
+  --color-canvas: #FAF9F8;
+  --color-text-main: #111111;
+  --color-text-muted: #767676;
+}
+
+@layer base {
+  :root {
+    --primary: #E60023;
+    --primary-dark: #C8001A;
+    --primary-light: #FEE8EB;
+    --canvas: #FAF9F8;
+    --dark: #111111;
+    --muted: #767676;
+    --success: #16A34A;
+    --warning: #F59E0B;
+  }
+
+  body {
+    background-color: #FAF9F8;
+    color: #111111;
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Pinterest Iconic Brand Red Accents */
+.pinterest-btn {
+  background-color: #E60023;
+  color: #FFFFFF;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pinterest-btn:hover {
+  background-color: #C8001A;
+}
+
+.pinterest-btn-secondary {
+  background-color: #EFEFEF;
+  color: #111111;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pinterest-btn-secondary:hover {
+  background-color: #E2E2E2;
+}
+
+.pinterest-gradient {
+  background: linear-gradient(135deg, #E60023 0%, #C8001A 100%);
+}
+
+/* Backward compatibility mapping so existing classes automatically render Pinterest colors */
+.pink-gradient {
+  background: linear-gradient(135deg, #E60023 0%, #C8001A 100%);
+}
+
+.pink-gradient-soft {
+  background: linear-gradient(135deg, #FFF5F6 0%, #FEE8EB 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(230, 0, 35, 0.12);
+}
+
+.glass-dropdown {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(230, 0, 35, 0.15);
+}
+
+/* Custom Pinterest Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF9F8;
+}
+::-webkit-scrollbar-thumb {
+  background: #FCD5DA;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E60023;
+}
